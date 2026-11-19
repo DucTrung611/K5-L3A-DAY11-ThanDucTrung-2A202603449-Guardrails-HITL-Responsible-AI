@@ -1,5 +1,20 @@
 # Day 11 — Controlled Agent Security (2026)
 
+> **Học viên:** Than Duc Trung · **MSSV:** 2A202603449 · **Lớp:** K5-L3A
+>
+> **Cách chạy nhanh (từ gốc repo, sau khi tạo `.venv` + điền `.env`):**
+>
+> ```powershell
+> $env:PYTHONIOENCODING = "utf-8"
+> python src/main.py --part 2          # CP2 — guardrails (offline)
+> python src/main.py --part 3          # CP3 — sinh outputs/results.json, audit_log.json, metrics.json
+> python scripts/precheck_attacks.py   # (tuỳ chọn) kiểm tra prompt tấn công offline với Red Advance L1
+> python src/main.py --part 4          # CP4 — sinh outputs/attack_results.json
+> python scripts/grade.py --submission-dir . --out outputs/grade_report.json
+> ```
+>
+> **Kết quả:** safe 0/7 bị chặn · attack 8/8 bị chặn · rate limit 10 pass / 5 block · Red leak 5/5 (chọn bonus **B1**) · Red Advance 0/5.
+
 > 👤 **Hình thức:** bài tập **cá nhân** (1 người / 1 MSSV).  
 > 🎯 **Mục tiêu:** đóng vai **Blue Team** để học cách xây Guardrails phòng thủ, rồi đóng vai **Red Team** để tấn công agent **Red** hoặc **Red Advance**.  
 > ✅ Làm theo **Checkpoint 1 → 5** trong [`CHECKPOINTS.md`](CHECKPOINTS.md) · nộp theo [`SUBMISSION.md`](SUBMISSION.md).
